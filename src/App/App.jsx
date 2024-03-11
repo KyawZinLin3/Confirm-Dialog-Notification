@@ -6,6 +6,7 @@ import "@fontsource/roboto/700.css";
 import SideMenu from "../components/SideMenu";
 import { makeStyles } from "@mui/styles";
 import Header from "../components/Header";
+import { CssBaseline } from "@mui/material";
 
 const useStyles = makeStyles({
   appMain: {
@@ -18,12 +19,13 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div>
+    <>
       <SideMenu></SideMenu>
       <div className={classes.appMain}>
         <Header></Header>
       </div>
-    </div>
+      <CssBaseline></CssBaseline>
+    </>
   );
 }
 

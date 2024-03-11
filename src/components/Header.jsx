@@ -8,20 +8,31 @@ import {
 } from "@mui/material";
 import React from "react";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 
 export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
         <Grid container>
-          <Grid item sm={4} style={{ border: "1px solid #fff" }}>
+          <Grid item>
             <InputBase></InputBase>
           </Grid>
-          <Grid item sm={8} style={{ border: "1px solid #000" }}>
+          <Grid item sm={true}></Grid>
+          <Grid item>
             <IconButton>
-              <Badge>
+              <Badge badgeContent={4} color="secondary">
                 <NotificationsNoneIcon />
               </Badge>
+            </IconButton>
+            <IconButton>
+              <Badge badgeContent={4} color="secondary">
+                <ChatBubbleOutlineIcon />
+              </Badge>
+            </IconButton>
+            <IconButton>
+              <PowerSettingsNewIcon />
             </IconButton>
           </Grid>
         </Grid>
